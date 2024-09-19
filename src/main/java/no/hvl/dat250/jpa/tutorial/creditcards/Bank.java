@@ -1,9 +1,6 @@
 package no.hvl.dat250.jpa.tutorial.creditcards;
 
 import jakarta.persistence.*;
-
-import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 
 @Entity

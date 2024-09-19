@@ -4,8 +4,6 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 import no.hvl.dat250.jpa.tutorial.creditcards.*;
-
-import java.io.IOException;
 import java.util.*;
 
 public class CreditCardsMain {
