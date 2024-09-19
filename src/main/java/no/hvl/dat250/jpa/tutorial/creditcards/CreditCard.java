@@ -9,28 +9,65 @@ public class CreditCard {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public Integer getNumber() {
-        // TODO: implement method!
-        return null;
+    private Integer number;
+
+    private Integer creditLimit;
+
+    private Integer balance;
+
+    @ManyToOne
+    @JoinColumn(name = "pincode_id")
+    private Pincode pincode;
+
+    @ManyToOne
+    @JoinColumn(name = "owning_bank", nullable = false)
+    private Bank owningBank;
+
+    public Long getId() {
+        return id;
     }
 
-    public Integer getBalance() {
-        // TODO: implement method!
-        return null;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
     }
 
     public Integer getCreditLimit() {
-        // TODO: implement method!
-        return null;
+        return creditLimit;
+    }
+
+    public void setCreditLimit(Integer creditLimit) {
+        this.creditLimit = creditLimit;
+    }
+
+    public Integer getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Integer balance) {
+        this.balance = balance;
     }
 
     public Pincode getPincode() {
-        // TODO: implement method!
-        return null;
+        return pincode;
+    }
+
+    public void setPincode(Pincode pincode) {
+        this.pincode = pincode;
     }
 
     public Bank getOwningBank() {
-        // TODO: implement method!
-        return null;
+        return owningBank;
+    }
+
+    public void setOwningBank(Bank owningBank) {
+        this.owningBank = owningBank;
     }
 }
